@@ -1,0 +1,48 @@
+:root{
+    --rojizo: #8B0000;
+    --rosa: #C9A9A6;
+    --azul: #00008B;
+    --palido: #EDEADE;
+    --celeste: #EAF1EA;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    transition: .3s ease all;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    border: none;
+}
+
+button:focus,
+input:focus{
+    outline: none;
+}
+
+@media screen and (max-width: 768px){
+    body{
+        font-size: 12px;
+    }
+}
+
+@media(min-width: 576px){
+    body{
+        display: block;
+    }
+}

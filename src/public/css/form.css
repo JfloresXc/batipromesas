@@ -1,0 +1,28 @@
+.form{
+    height: 100%;
+}
+
+.form__group{
+    padding-bottom: 10px;
+}
+
+.form__input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+.form__button-submit{
+    width: 100%;
+    padding: 1em;
+    border-radius: 10px;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+.form__button-submit:hover{
+    opacity: 80%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
+}

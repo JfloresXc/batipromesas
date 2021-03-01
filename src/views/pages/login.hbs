@@ -1,0 +1,85 @@
+<link rel="stylesheet" href="/css/login.css">
+
+<div class="container-login">
+    <div class="preselection-login">
+        <div class="preselection-login__card preselection-login__jose">
+            <div class="card-1">
+                <div class="card-1__face card-1__face-front">
+                    <div class="card__content">
+                        <h1 class="card__title-front">Jose Flores</h1>
+                        <p class="card__description">Desarrollador en desarrollo</p>
+                        <div class="card__image">
+                            <img src="/img/jose.JPG" alt="Jose" class="card__logo">
+                        </div>
+                        <div class="card__question">
+                            <p>¿Eres Jose?</p>
+                        </div>
+                        <div class="card__options">
+                            <button class="card__button card-1__si">
+                                Sí
+                            </button>
+                            <button class="card__button card-1__no">
+                                No
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-1__face card-1__face-back">
+                    <div class="card__header">
+                        <h1 class="card__title-back">Jose</h1>
+                        <button class="card__button-close card-1__button-close">
+                            <span class="material-icons card__icon-close">highlight_off</span>
+                        </button>
+                    </div>
+                    <div class="card__body">
+                        {{>form}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="preselection-login__card preselection-login__mary">
+            <div class="card-2">
+                <div class="card-2__face card-2__face-front">
+                    <div class="card__content">
+                        <h1 class="card__title">Mary Ramos</h1>
+                        <div class="card__description">
+                            <p>Comunicadora en comunicación</p>
+                        </div>
+                        <div class="card__image">
+                            <img src="/img/mary.JPG" alt="Jose" class="card__logo">
+                        </div>
+                        <div class="card__question">
+                            <p>¿Eres Mary?</p>
+                        </div>
+                        <div class="card__options">
+                            <button class="card__button card-2__si">
+                                Sí
+                            </button>
+                            <button class="card__button card-2__no">
+                                No
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-2__face card-2__face-back">
+                    <div class="card__header">
+                        <h1 class="card__title-back">Mary</h1>
+                        <button class="card__button-close card-2__button-close">
+                            <span class="material-icons card__icon-close">highlight_off</span>
+                        </button>
+                    </div>
+                    <div class="card__body">
+                        {{>form}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="login">
+
+    </div>
+</div>
+
+<script src="/js/card.js"></script>

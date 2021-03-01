@@ -1,0 +1,50 @@
+body{
+    overflow: hidden;
+}
+
+.index-container__title{
+    color: whitesmoke;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.index-container__title h1{
+    font-size: 4em;
+    font-weight: 500;
+}
+
+.index-container__title p{
+    text-align: center;
+}
+
+.index-container__list-links{
+    background-image: url('/img/cottonbro-size.jpg');
+    background-position: center ;
+    background-size: cover;
+    min-height: 90vh;
+    padding: 4.375em;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: space-between;
+}
+
+.index-container__list-link{
+    display: flex;
+}
+
+.index-container__list-link a{
+    color: whitesmoke;
+    font-size: 2em;
+    transition: .5s ease all;
+}
+
+.index-container__list-link a:hover{
+    opacity: 50%;
+}
+
+.right{
+    justify-content: flex-end;
+}

@@ -10,7 +10,7 @@ const session = require('express-session')
 const app = express()
 
 // Settings
-app.set('port', 2424 || process.env.PORT)
+app.set('port', process.env.PORT || 2424)
 app.set('views', path.join(__dirname, 'views'))
 app.engine('hbs', expHbs({
     extname: '.hbs',

@@ -12,21 +12,25 @@
     </ul>
 </div>
 {{else}}
-<link rel="stylesheet" href="/css/navGeneral.css">
-<div class="nav">
-    <ul class="nav__list-circles">
-        <li class="nav__item-circle"></li>
-        <li class="nav__item-circle"></li>
-        <li class="nav__item-circle"></li>
-    </ul>
+    <link rel="stylesheet" href="/css/navGeneral.css">
+    <div class="nav">
+        <ul class="nav__list-circles">
+            <li class="nav__item-circle"></li>
+            <li class="nav__item-circle"></li>
+            <li class="nav__item-circle"></li>
+        </ul>
 
-    <ul class="nav__list-links">
-        <li class="nav__link"><a href="/">inicio</a></li>
-        <li class="nav__link"><a href="">galería</a></li>
-        <li class="nav__link"><a href="">personajes</a></li>
-        <li class="nav__link"><a href="">música</a></li>
-        <li class="nav__link"><a href="">comentarios</a></li>
-    </ul>
-</div>
+        <ul class="nav__list-links">
+            <li class="nav__link" id="inicio"><a href="/">inicio</a></li>
+            <li class="nav__link" id="galeria"><a href="/galery">galería</a></li>
+            <li class="nav__link" id="personajes"><a href="/characters">personajes</a></li>
+            <li class="nav__link" id="musica"><a href="/topics">temas</a></li>
+            <li class="nav__link" id="comentarios"><a href="/comment">comentarios</a></li>
+            {{#if user}}
+            <li class="nav__link"><a href="/logout">logout</a></li>
+            {{/if}}
+        </ul>
+    </div>
+
+    <script src="/js/nav.js"></script>
 {{/if}}
-

@@ -12,13 +12,16 @@
   "license": "ISC",
   "dependencies": {
     "@handlebars/allow-prototype-access": "^1.0.3",
+    "bcrypt": "^5.0.1",
     "connect-flash": "^0.1.1",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.1",
     "express-session": "^1.17.1",
     "firebase": "^8.2.9",
     "handlebars": "^4.7.7",
+    "mongoose": "^5.11.18",
     "morgan": "^1.10.0",
+    "muuri": "^0.9.3",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0"
   },

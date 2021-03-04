@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/css/characters.css">
+
+<div class="container">
+    <div class="grid">
+        {{#each characters}}
+            <div class="item">
+                <div class="item-content">
+                    <div class="item-character__header">
+                        <h1>{{name}}</h1>
+                    </div>
+                    <div class="item-character__body">
+                        <p>{{description}}</p>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/muuri@0.9.3/dist/muuri.min.js"></script>
+<script src="/js/characters.js"></script>

@@ -1,8 +1,17 @@
-const {Router} = require('express')
+const { Router } = require('express')
 const routes = Router()
-const {renderUsers} = require('../controllers/user.controllers')
+const { midlewareLogin } = require('../helpers/login.helpers')
+const { renderUsers,
+    createUser, deleteUser, renderUser,
+    deleteUsers } = require('../controllers/user.controllers')
 
-routes.route('')
-    .get(renderUsers)
+routes.route('/')
+    .get(midlewareLogin, renderUsers)
+    .post(midlewareLogin, createUser)
+    .delete(midlewareLogin, deleteUsers)
+
+routes.route('/:id')
+    .get(midlewareLogin, renderUser)
+    .delete(midlewareLogin, deleteUser)
 
 module.exports = routes

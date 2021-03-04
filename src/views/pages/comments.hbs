@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="/css/comments.css">
+
+<div class="container">
+    <div class="comments__header form-comment">
+        {{>form}}
+    </div>
+
+    <div class="comments__list">
+        {{#each comments}}
+            <div class="comment">
+                <div class="comment-header">
+                    <h1>{{username}}</h1>
+                    <span class="material-icons">offline_bolt</span>
+                </div>
+                <div class="comment-body">
+                    <p>{{description}}</p>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>

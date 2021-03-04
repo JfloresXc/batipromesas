@@ -8,6 +8,7 @@ const flash = require('connect-flash')
 const passport = require('passport')
 const session = require('express-session')
 const app = express()
+require('./config/passport')
 
 // Settings
 app.set('port', process.env.PORT || 2424)
@@ -23,6 +24,8 @@ app.set('view engine', 'hbs')
 
 // Midlewares
 app.use(morgan('dev'))
+app.use(express.urlencoded({extended: false}))
+app.use(express.json())
 app.use(session({
     secret: 'es un secreto de tu mirada y la mía, un presentimiento',
     resave: true,
@@ -34,13 +37,17 @@ app.use(flash())
 
 // Global Varibles
 app.use((req, res, next) => {
-    // res.locals.navIndex = req.flash('navIndex')
+    res.locals.user = req.user
+    res.locals.error = req.flash('error')
     next()
 })
 
 //Routes
 app.use(require('./routes/index.routes'))
-app.use('/user',  require('./routes/user.routes'))
+app.use('/user', require('./routes/user.routes'))
+app.use('/comment', require('./routes/comment.routes'))
+app.use('/topics', require('./routes/topics.routes'))
+app.use('/characters', require('./routes/characters.routes'))
 
 //Static files
 app.use(express.static(path.join(__dirname, 'public')))

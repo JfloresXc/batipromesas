@@ -26,12 +26,17 @@ a{
     text-decoration: none;
 }
 
+input{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
 button{
     border: none;
 }
 
 button:focus,
-input:focus{
+input:focus,
+textarea:focus{
     outline: none;
 }
 

@@ -35,6 +35,12 @@
     display: flex;
     justify-content: center;
     transition: .3s ease all;
+    border-bottom: 1px solid transparent;
+}
+
+.nav_link-active{
+    background: white;
+    color: black;
 }
 
 .nav__link:hover{

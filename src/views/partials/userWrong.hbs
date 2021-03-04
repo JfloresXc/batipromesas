@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/css/userWrong.css">
+
+{{#if error}}
+    <div class="overlay-user-wrong">
+        <div class="overlay-user-wrong__content">
+            <p>Parece que no eres ni Jose ni Mary, ¿qué haces aquí? :,)</p>
+            <form action="/" method="GET">
+                <button type="submit"><span class="material-icons">highlight_off</span></button>
+            </form>
+        </div>
+    </div>
+{{/if}}
+
+{{#if userWrong}}
+    <div class="overlay-user-wrong">
+        <div class="overlay-user-wrong__content">
+            <p>Parece que no eres ni Jose ni Mary, ¿qué haces aquí? :,)</p>
+            <form action="/" method="GET">
+                <button type="submit"><span class="material-icons">highlight_off</span></button>
+            </form>
+        </div>
+    </div>
+{{/if}}

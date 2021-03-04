@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="/css/topics.css">
+
+<div class="container">
+    <div class="grid">
+        {{#each temas}}
+            <div class="item">
+                <div class="item-content">
+                    <h1>{{title}}</h1>
+                    <div class="item-topic__body">
+                        <p>{{description}}</p>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/muuri@0.9.3/dist/muuri.min.js"></script>
+<script src="/js/topics.js"></script>

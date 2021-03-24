@@ -20,7 +20,7 @@ body{
 }
 
 .index-container__list-links{
-    background-image: url('/img/cottonbro-size.jpg');
+    background-image: url('/img/backgrounds/cottonbro-size.jpg');
     background-position: center ;
     background-size: cover;
     min-height: 90vh;

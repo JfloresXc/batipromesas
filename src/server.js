@@ -7,6 +7,8 @@ const handlebars = require('handlebars')
 const flash = require('connect-flash')
 const passport = require('passport')
 const session = require('express-session')
+const methodOverride = require('method-override')
+const upload = require('./config/multer')
 const app = express()
 require('./config/passport')
 
@@ -26,6 +28,8 @@ app.set('view engine', 'hbs')
 app.use(morgan('dev'))
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
+app.use(methodOverride('_method'))
+app.use(upload)
 app.use(session({
     secret: 'es un secreto de tu mirada y la mía, un presentimiento',
     resave: true,
@@ -45,9 +49,10 @@ app.use((req, res, next) => {
 //Routes
 app.use(require('./routes/index.routes'))
 app.use('/user', require('./routes/user.routes'))
-app.use('/comment', require('./routes/comment.routes'))
-app.use('/topics', require('./routes/topics.routes'))
+app.use('/galery', require('./routes/galery.routes'))
 app.use('/characters', require('./routes/characters.routes'))
+app.use('/topics', require('./routes/topics.routes'))
+app.use('/comment', require('./routes/comment.routes'))
 
 //Static files
 app.use(express.static(path.join(__dirname, 'public')))

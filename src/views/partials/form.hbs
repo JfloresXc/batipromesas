@@ -1,20 +1,38 @@
 <link rel="stylesheet" href="/css/form.css">
 
 <div class="form">
-    
-{{#if activeComments}}
+
+    {{#if activeComments}}
     <form action="/comment" method="POST">
         <div class="form__group">
             <input type="text" class="form__input" name="username" placeholder="Nombre de usuario">
         </div>
         <div class="form__group">
-            <textarea name="description" class="form__textarea"
-             rows="5" placeholder="Escribe un descripción"></textarea>
+            <textarea name="description" class="form__textarea" rows="5"
+                placeholder="Escribe una descripción"></textarea>
         </div>
         <div class="form__group-submit form__button-submit-short">
             <button type="submit" class="form__button-submit">Enviar</button>
         </div>
-{{else}}
+    </form>
+    {{else}}
+
+    {{#if galery}}
+    <form action="/galery/add" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" class="form__file">
+        <div class="form__group">
+            <input type="text" class="form__input" name="title" placeholder="Añade un título">
+        </div>
+        <div class="form__group">
+            <input type="text" class="form__input" name="month" placeholder="Añade un mes para la imagen">
+        </div>
+        <div class="form__group">
+            <textarea name="description" class="form__textarea" rows="5"
+                placeholder="Añade una descripción"></textarea>
+        </div>
+        <button type="submit" class="form__button-submit">Ingresar</button>
+    </form>
+    {{else}}
     <form action="/login" method="POST">
         <div class="form__group">
             <input type="text" class="form__input" name="username" placeholder="Usuario">
@@ -22,8 +40,10 @@
         <div class="form__group">
             <input type="password" class="form__input" name="password" placeholder="Password">
         </div>
-    <button type="submit" class="form__button-submit">Ingresar</button>
-{{/if}}
+        <button type="submit" class="form__button-submit">Ingresar</button>
     </form>
-</div>
+    {{/if}}
 
+
+    {{/if}}
+</div>

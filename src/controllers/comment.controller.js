@@ -17,6 +17,11 @@ controller.createComment = async (req, res) => {
     res.redirect('/comment')
 }
 
+controller.updateComment = async (req, res) => {
+    const comments = await Comment.find()
+    res.render('pages/updateComment', {comments: comments, activeComments: true})
+}
+
 controller.deleteComments = async (req, res) => {
     await Comment.remove()
     res.json({message: 'Deleted successfully !'})
@@ -30,7 +35,7 @@ controller.getComment = async (req, res) => {
 
 controller.deleteComment = async (req, res) => {
     const comment = await Comment.findByIdAndDelete(req.params.id)
-    res.json({message: 'Deleted successfully !'})
+    res.redirect('/comment/update')
 }
 
 module.exports = controller

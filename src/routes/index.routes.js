@@ -27,10 +27,6 @@ routes.get('/logout', (req, res) => {
     res.redirect('/')
 })
 
-routes.get('/galery', (req, res) => {
-    res.render('pages/galery', {galery: true}) 
-})
-
 routes.get('/home', midlewareLogin, (req, res) => {
     res.render('pages/home')
 })

@@ -8,29 +8,65 @@
     </ul>
 
     <ul class="nav__list-links">
-        <li class="nav_list-item-login"><a href="/login">Iniciar Sesión :3</a></li>
+        {{#if user}}
+
+        {{else}}
+            <li class="nav_list-item-login"><a href="/login">Iniciar Sesión :3</a></li>
+        {{/if}}
     </ul>
 </div>
 {{else}}
-    <link rel="stylesheet" href="/css/navGeneral.css">
-    <div class="nav">
-        <ul class="nav__list-circles">
-            <li class="nav__item-circle"></li>
-            <li class="nav__item-circle"></li>
-            <li class="nav__item-circle"></li>
-        </ul>
 
+{{#if user}}
+<link rel="stylesheet" href="/css/navSession.css">
+
+<div class="nav">
+    <ul class="nav__list-circles">
+        <li class="nav__item-circle"></li>
+        <li class="nav__item-circle"></li>
+        <li class="nav__item-circle"></li>
+    </ul>
+
+
+
+    <span class="material-icons nav__items-icons">reorder</span>
+
+    <div class="container-links">
         <ul class="nav__list-links">
+            <li class="nav__link"><a href="/galery/add">Añadir imagen</a></li>
+            <li class="nav__link"><a href="/characters/add">Añadir personaje</a></li>
+            <li class="nav__link"><a href="/topics/add">Añadir tema</a></li>
+            <li class="nav__link"><a href="/comment/update">Editar comentario</a></li>
+            <hr>
             <li class="nav__link" id="inicio"><a href="/">inicio</a></li>
+            <li class="nav__link" id="home"><a href="/home">home</a></li>
             <li class="nav__link" id="galeria"><a href="/galery">galería</a></li>
             <li class="nav__link" id="personajes"><a href="/characters">personajes</a></li>
             <li class="nav__link" id="musica"><a href="/topics">temas</a></li>
             <li class="nav__link" id="comentarios"><a href="/comment">comentarios</a></li>
-            {{#if user}}
-            <li class="nav__link"><a href="/logout">logout</a></li>
-            {{/if}}
+            <li class="nav__link nav_list-item-login"><a href="/logout">logout</a></li>
         </ul>
     </div>
+</div>
+{{else}}
+<link rel="stylesheet" href="/css/navGeneral.css">
+<div class="nav">
+    <ul class="nav__list-circles">
+        <li class="nav__item-circle"></li>
+        <li class="nav__item-circle"></li>
+        <li class="nav__item-circle"></li>
+    </ul>
 
-    <script src="/js/nav.js"></script>
+    <ul class="nav__list-links">
+        <li class="nav__link" id="inicio"><a href="/">inicio</a></li>
+        <li class="nav__link" id="galeria"><a href="/galery">galería</a></li>
+        <li class="nav__link" id="personajes"><a href="/characters">personajes</a></li>
+        <li class="nav__link" id="musica"><a href="/topics">temas</a></li>
+        <li class="nav__link" id="comentarios"><a href="/comment">comentarios</a></li>
+    </ul>
+</div>
 {{/if}}
+
+{{/if}}
+
+<script src="/js/nav.js"></script>

@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/css/comments.css">
+
+<div class="container">
+    <div class="comments__list">
+        {{#each comments}}
+        <div class="comment">
+            <div class="header-comment">
+                <div class="comment-header">
+                    <h1>{{username}}</h1>
+                    <span class="material-icons">offline_bolt</span>
+                </div>
+                <form method="POST" action="/comment/{{_id}}?_method=DELETE">
+                    <button type="submit" class="button__delete-comment">Eliminar comentario</button>
+                </form>
+            </div>
+            <div class="comment-body">
+                <p>{{description}}</p>
+            </div>
+
+        </div>
+        {{/each}}
+    </div>
+</div>

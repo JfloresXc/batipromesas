@@ -1,0 +1,128 @@
+.nav{
+    width: 100%;
+    min-height: 64px;
+    margin: 0 auto;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
+}
+.nav__list-circles{
+    width: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav__item-circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--palido);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
+}
+
+.nav__items-icons{
+    color: white;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.options-add{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.option__link{
+    width: 150px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    transition: .3s ease all;
+    border-bottom: 1px solid transparent;
+    align-items: center;
+    text-align: center;
+}
+
+.option__link:hover{
+    opacity: 50%;
+}
+
+.option__link a{
+    color: whitesmoke;
+}
+
+.container-links{
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    display: none;
+}
+
+.container-links-active{
+    display: flex;
+}
+
+.nav__list-links{
+    background: whitesmoke;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav__link{
+    flex: 1;
+    transition: .3s ease all;
+    border-bottom: 1px solid transparent;
+    align-items: center;
+    width: 100%;
+}
+
+.nav__link a{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 13px;
+    font-size: 20px;
+    color: black;
+}
+
+.nav__link:hover{
+    background: rgba(0, 0, 0, .3);
+}
+
+.nav_list-item-login a{
+    background: black;
+    color: white;
+    transition: .5s ease all;
+}
+
+.nav_list-item-login a:hover{
+    background: rgba(0, 0, 0, .3);
+}
+
+@media screen and (max-width: 768px){
+    .nav{
+        padding: 0 30px;
+    }
+
+    .nav__list-circles{
+        padding: 15px 0;
+    }
+
+    .nav__link a{
+        padding: 11px;
+        font-size: 1em;
+    }
+}
+
+

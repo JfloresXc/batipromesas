@@ -9,7 +9,11 @@ controller.renderTemas = async (req, res) => {
 controller.createTema = async (req, res) => {
     const tema = new Tema(req.body)
     await tema.save()
-    res.json(tema)
+    res.redirect('/topics')
+}
+
+controller.renderFormTema = async (req, res) => {
+    res.render('pages/addTopic')
 }
 
 controller.updateTema = async (req, res) => {

@@ -1,14 +1,19 @@
 const {Router} = require('express')
 const routes = Router()
 const {renderTemas, createTema,
-    deleteTema, updateTema} = require('../controllers/topics.controllers')
+    deleteTema, updateTema,
+    renderFormTema} = require('../controllers/topics.controllers')
+const { midlewareLogin } = require('../helpers/login.helpers')
 
 routes.route('/')
     .get(renderTemas)
-    .post(createTema)
+
+routes.route('/add')
+    .get(midlewareLogin, renderFormTema)
+    .post(midlewareLogin, createTema)
 
 routes.route('/:id')
-    .delete(deleteTema)
-    .put(updateTema)
+    .delete(midlewareLogin, deleteTema)
+    .put(midlewareLogin, updateTema)
 
 module.exports = routes

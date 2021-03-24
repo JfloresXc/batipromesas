@@ -28,11 +28,21 @@
     font-family: 'Josefin Sans', sans-serif;
 }
 
+.form__file{
+    width: 100%;
+    background: whitesmoke;
+    border-radius: 10px;
+    padding: .5em;
+    margin: .5em 0;
+    cursor: pointer;
+    font-weight: 800;
+}
+
 .form__button-submit{
     width: 100%;
     padding: 1em;
     border-radius: 10px;
-    background: black;
+    background: rgba(0, 0, 0, .8);
     color: white;
     cursor: pointer;
     transition: .5s ease all;
@@ -49,6 +59,6 @@
 }
 
 .form__button-submit:hover{
-    opacity: 80%;
+    background: black;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
 }

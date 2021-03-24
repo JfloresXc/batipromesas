@@ -7,8 +7,10 @@ const { renderUsers,
 
 routes.route('/')
     .get(midlewareLogin, renderUsers)
-    .post(midlewareLogin, createUser)
     .delete(midlewareLogin, deleteUsers)
+
+routes.route('/add')
+    .post(createUser)
 
 routes.route('/:id')
     .get(midlewareLogin, renderUser)

@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/css/form.css">
+<link rel="stylesheet" href="/css/characters.css">
+
+<div class="container-formCharacter">
+    <div class="header">
+        <h1 class="header__title">Crear Personaje</h1>
+    </div>
+
+    <div class="form">
+        <form action="/characters/add" method="POST">
+            <div class="form__group">
+                <input type="text" class="form__input" name="name" placeholder="Nombre de personaje">
+            </div>
+            <div class="form__group">
+                <textarea name="description" class="form__textarea" rows="10"
+                    placeholder="Escribe una descripción"></textarea>
+            </div>
+            <div class="form__group-submit form__button-submit-short">
+                <button type="submit" class="form__button-submit">Crear personaje</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -2,9 +2,7 @@ const card1 = document.querySelector('.card-1')
 const card2 = document.querySelector('.card-2')
 
 const card1Si = document.querySelector('.card-1__si')
-const card1No = document.querySelector('.card-1__no')
 const card2Si = document.querySelector('.card-2__si')
-const card2No = document.querySelector('.card-2__no')
 
 const buttonClose1 = document.querySelector('.card-1__button-close')
 const buttonClose2 = document.querySelector('.card-2__button-close')

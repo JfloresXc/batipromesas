@@ -8,24 +8,46 @@
         <div class="header-list">
             <h3>Meses</h3>
             <div class="header__list-items">
-            <a href="" class="header__item header__item-active" id="todos">todo</a>
-            <a href="" class="header__item" id="inicios">inicios</a>
-            <a href="" class="header__item" id="primer">primer</a>
-            <a href="" class="header__item" id="segundo">segundo</a>
-            <a href="" class="header__item" id="tercer">tercer</a>
-            <a href="" class="header__item" id="cuarto">cuarto</a>
-            <a href="" class="header__item" id="quinto">quinto</a>
-            <a href="" class="header__item" id="sexto">sexto</a>
+                <a href="" class="header__item header__item-active" id="todos">todo</a>
+                <a href="" class="header__item" id="inicios">inicios</a>
+                <a href="" class="header__item" id="primer">primer</a>
+                <a href="" class="header__item" id="segundo">segundo</a>
+                <a href="" class="header__item" id="tercer">tercer</a>
+                <a href="" class="header__item" id="cuarto">cuarto</a>
+                <a href="" class="header__item" id="quinto">quinto</a>
+                <a href="" class="header__item" id="sexto">sexto</a>
             </div>
         </div>
     </div>
 
-    <div class="grid"></div>
+    {{#if galery}}
+    <div class="grid">
+        {{#each images}}
+        <div class="item" data-category="{{month}}" data-labels="{{description}}">
+            <div className="item-content">
+                <img src="/img/uploads/{{originalname}}" alt="{{title}}" class="item__image" />
+                <form method="POST" action="/galery/{{_id}}?_method=DELETE">
+                    <button type="submit" class="image__delete"><span class="material-icons">delete_outline</span></button>
+                </form>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{else}}
+    <div class="grid">
+        {{#each images}}
+        <div class="item" data-category="{{month}}" data-labels="{{description}}">
+            <div className="item-content">
+                <img src="/img/uploads/{{originalname}}" alt="{{title}}" class="item__image" />
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/if}}
+    
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/muuri@0.9.3/dist/muuri.min.js"></script>
 <script src="/js/galery.js"></script>
-
-
-

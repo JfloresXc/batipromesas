@@ -1,5 +1,21 @@
-body{
-    overflow: hidden;
+.message{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    background: var(--rojizo);
+}
+
+.message p{
+    width: 50em;
+    text-align: center;
+    font-size: 1.5625em;
+    padding: 1em;
+    color: var(--palido);
+}
+
+.index-container{
+    position: relative;
 }
 
 .index-container__title{

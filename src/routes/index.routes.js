@@ -2,6 +2,7 @@ const { Router } = require('express')
 const passport = require('passport')
 const routes = Router()
 const { midlewareLogin } = require('../helpers/login.helpers')
+const Message = require('../models/messages.model')
 
 routes.get('/', (req, res) => {
     const navIndex = true
@@ -27,8 +28,15 @@ routes.get('/logout', (req, res) => {
     res.redirect('/')
 })
 
-routes.get('/home', midlewareLogin, (req, res) => {
-    res.render('pages/home')
+routes.get('/home', midlewareLogin, async (req, res) => {
+    const messages = await Message.find()
+    res.render('pages/home', {messages})
+})
+
+routes.post('/home/message', async (req, res) => {
+    const message = new Message(req.body)
+    await message.save()
+    res.json(message)
 })
 
 module.exports = routes

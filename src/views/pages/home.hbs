@@ -1,5 +1,11 @@
 <link rel="stylesheet" href="/css/home.css">
 
+<div class="message">
+    {{#each messages}}
+        <p>{{message}}</p>
+    {{/each}}
+</div>
+
 <div class="container">
     <div class="options">
         <div class="options__link"><a href="/galery/add">Galería</a></div>

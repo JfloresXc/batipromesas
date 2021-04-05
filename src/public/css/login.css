@@ -36,6 +36,7 @@ body{
 .card-1__face, .card-2__face{
     height: 100%;
     width: 100%;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 20px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
